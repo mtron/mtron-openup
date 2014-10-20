@@ -6,8 +6,8 @@ class openup::install {
 
   exec { 'install-updates':
     refreshonly => true,
-	command     => '/usr/local/sbin/openup | mail root',
-	timeout     => 0,
+    command     => '/usr/local/sbin/openup | mail root',
+    timeout     => 0,
   }
 
   file { '/usr/local/sbin/openup':
