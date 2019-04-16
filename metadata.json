@@ -1,0 +1,32 @@
+{
+  "name": "mtron-openup",
+  "version": "1.0.0",
+  "author": "mtron",
+  "summary": "checks for OpenBSD stable release ports package updates by M:Tier via openup",
+  "license": "Apache-2.0",
+  "source": "https://github.com/mtron/mtron-openup.git",
+  "project_page": "https://github.com/mtron/mtron-openup",
+  "issues_url": "https://github.com/mtron/mtron-openup/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.0.0"
+    }
+  ],
+  "data_provider": null,
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "OpenBSD",
+      "operatingsystemrelease": [
+        "6"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.0.0"
+    }
+  ],
+  "description": "checks for OpenBSD stable release ports package updates by M:Tier via openup"
+}

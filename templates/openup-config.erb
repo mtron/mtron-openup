@@ -1,0 +1,38 @@
+## CAUTION: File is managed via puppet
+## Local changes will be overwritten! 
+
+## openup configuration file
+## https://www.mtier.org/solutions/apps/openup/
+##
+## openup is a utility for OpenBSD that checks for security updates
+## in both packages and the base system.
+
+# OPENUP_URL
+# default: https://stable.mtier.org/openup"
+# description: URL to the latest openup version
+OPENUP_URL="<%= @openup_url %>"
+
+# PKG_CERT_URL
+# default: https://stable.mtier.org/mtier.cert
+# description: URL to the certificate used to sign the stable packages
+PKG_CERT_URL="https://stable.mtier.org/mtier.cert"
+
+# PKG_CERT_FPRINT
+# default: DE:29:0F:7F:B8:0E:36:5A:AF:A9:BF:E0:4E:08:C2:0F:2D:50:16:97
+# description: fingerprint of the certificate listed in PKG_CERT_URL
+PKG_CERT_FPRINT="DE:29:0F:7F:B8:0E:36:5A:AF:A9:BF:E0:4E:08:C2:0F:2D:50:16:97"
+
+# PKG_PATH_MAIN
+# default: http://ftp.fr.openbsd.org/pub/OpenBSD/$(uname -r)/packages/$(arch -s)
+# description: PKG_PATH of the currently running OpenBSD release
+PKG_PATH_MAIN="<%= @openbsd_mirror %>/$(uname -r)/packages/$(arch -s)"
+
+# PKG_PATH_UPDATE
+# default: https://stable.mtier.org/updates/$(uname -r)/$(arch -s)
+# description: PKG_PATH for the corresponding release stable packages service
+PKG_PATH_UPDATE="<%= @openbsd_mtier_url %>/$(uname -r)/$(arch -s)"
+
+# VUXML_URL
+# default: https://stable.mtier.org/vuxml/$(uname -r | tr -d '.').xml
+# description: URL for the current OpenBSD release of the latest vulnerabilities database
+VUXML_URL="<%= @openbsd_vul_db %>/$(uname -r | tr -d '.').xml"
